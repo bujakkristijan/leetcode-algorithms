@@ -5,7 +5,7 @@ let s = "aaaaaa";
 let t = "bbaaaa";
 var isSubsequence = function(s, t) {
     let isFound;
-    let indexFound=-1;
+    let indexFound=0;
     if(s.length === 0){
         return true
     }
@@ -14,7 +14,7 @@ var isSubsequence = function(s, t) {
         for(let j=0; j<t.length; j++){
             if(s[i] === t[j] && j>=indexFound){
                 isFound = true;
-                indexFound = j;
+                indexFound = j+1;
                 console.log("index found: " + indexFound + " , " + s[i] + " , " + t[j]);
                 break;
             }
